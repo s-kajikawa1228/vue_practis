@@ -1,0 +1,32 @@
+<div id="app">
+  <p>
+      {{ message }}
+  </p>
+  <p>
+      {{ count }}
+  </p>
+  <p>
+      {{ user.prefecture }}
+  </p>
+  <p>
+      {{ colors[1] }}
+  </p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+      message: 'Hello Vue.js',
+      count: 0,
+      user: {
+          lastName: 'yamada',
+          firstName: 'taro',
+          prefecture: 'osaka'
+      },
+      colors: ['Red', 'Green', 'Blue']
+  }
+})
+</script>

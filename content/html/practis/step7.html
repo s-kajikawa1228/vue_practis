@@ -1,0 +1,24 @@
+<div id="app">
+  <button v-on:click="onClick">
+    Click
+  </button>
+  <p>
+    {{ now }}
+  </p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    now: ''
+  },
+  methods: {
+    onClick: function() {
+      this.now = new Date().toLocaleString();
+    }
+  }
+})
+</script>

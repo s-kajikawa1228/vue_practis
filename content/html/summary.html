@@ -1,0 +1,31 @@
+<div id="app">
+<p>
+    {{ message }}
+</p>
+<a v-if="toggle" v-bind:href="link">Vue.js公式サイト</a>
+<ul>
+    <li v-for="language in languages">{{ language }}</li>
+</ul>
+<button v-on:click="changeMessage">メッセージ変更</button>
+<br/>
+<input type="text" v-model="message">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello world',
+            link: 'https://jp.vuejs.org/index.html',
+            toggle: true,
+            languages: ['Javascript', 'Ruby', 'Python']
+        },
+        methods: {
+            changeMessage: function() {
+                this.message = 'Click!'
+            }
+        }
+    })
+
+</script>
